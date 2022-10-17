@@ -26,16 +26,16 @@ const Categories = () => {
          <Table className={classes.table}>
          <TableHead>
              <TableRow>
-                <Link to="/" className={classes.link}> <TableCell style={{cursor:'pointer'}}>
+                 <TableCell>
                      All Categories
-                 </TableCell></Link>
-             </TableRow> 
+                 </TableCell>
+             </TableRow>
          </TableHead>
          <TableBody>
            {
                categories.map(category => (
                    <TableRow>
-                      <Link to={`/${category}`} className={classes.link}><TableCell style={{cursor:'pointer'}}>{category}</TableCell> </Link> 
+                       <TableCell>{category}</TableCell>
                    </TableRow>
                ))
            }
