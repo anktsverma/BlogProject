@@ -25,6 +25,7 @@ const Login = () => {
 const submitEve=async(e)=>
 {   
     e.preventDefault();
+    console.log('this is url',url);
     const res=await axios.post(`${url}/getuser`,
     data
     );
