@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url='https://blog-app79.herokuapp.com/';
+const url='https://blog-app79.herokuapp.com';
 
 export const CreatePost=async (post)=>{
 try{

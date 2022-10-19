@@ -15,9 +15,13 @@ app.use(express.json());
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/',router);
-const PORT=7000;
+const PORT=process.env.PORT || 7000;
 
 
+if(process.env.NODE_ENV==='production')
+{
+    app.use(express.static('frontend/build'))
+}
 
 app.listen(PORT,()=>{
     console.log(`server is running at ${PORT}`);
