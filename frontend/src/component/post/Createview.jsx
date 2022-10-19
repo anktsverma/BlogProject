@@ -64,7 +64,7 @@ const Createview = () => {
 
     useEffect(async()=>{
         const x=localStorage.getItem('id');
-       const res=await axios.post("http://localhost:7000/name",{id:x})
+       const res=await axios.post("https://blog-app79.herokuapp.com//name",{id:x})
        console.log('res',res);
        let n=res.data.n;
        setPost({

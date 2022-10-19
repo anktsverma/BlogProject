@@ -25,7 +25,7 @@ const Login = () => {
 const submitEve=async(e)=>
 {   
     e.preventDefault();
-    const res=await axios.post(`http://localhost:7000/getuser`,
+    const res=await axios.post(`https://blog-app79.herokuapp.com//getuser`,
     data
     );
      localStorage.setItem("jwttoken", res.data.token);
