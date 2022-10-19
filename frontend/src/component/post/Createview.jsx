@@ -4,7 +4,7 @@ import { useState ,useEffect} from "react";
 import { CreatePost } from "../../service/api";
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
-const url=process.env.URI
+const url=process.env.REACT_APP_URI
 const useStyle=makeStyles({
     container:
     {

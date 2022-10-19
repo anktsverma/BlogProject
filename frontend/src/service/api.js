@@ -1,6 +1,5 @@
 import axios from 'axios';
-const url='https://blog-app79.herokuapp.com';
-
+const url=process.env.REACT_APP_URI
 export const CreatePost=async (post)=>{
 try{
     return await axios.post(`${url}/create`,post)

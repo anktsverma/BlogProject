@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useEffect} from "react";
 import {getPost} from '../../service/api';
 import axios from "axios";
-const url=process.env.URI
+const url=process.env.REACT_APP_URI
 const useStyle=makeStyles({
 container:{
     padding:'0 100px',

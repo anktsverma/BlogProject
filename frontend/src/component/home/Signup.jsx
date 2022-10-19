@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import {History } from 'react-router-dom';
 import axios  from 'axios';
-const url=process.env.URI
+const url=process.env.REACT_APP_URI
 export default function SignUp() {
   const [data,setData]=useState({
     fName: "",

@@ -3,7 +3,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-const url=process.env.URI
+const url=process.env.REACT_APP_URI
 
 const Login = () => {
   let navigate = useNavigate();
