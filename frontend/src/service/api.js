@@ -25,9 +25,7 @@ export const getAllPosts=async()=>
 export const getPost = async (id) => {
 try
 {
-    console.log(`ye getPost baali id hai `);
 const responce=await axios.get(`${url}/post/${id}`);
-console.log("response k baad bala console",id);
 
 console.log(`Hlwww from api.js 28 number ${responce}`);
 return responce.data;

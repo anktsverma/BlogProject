@@ -25,7 +25,7 @@ const Banner = () => {
     return ( 
        <Box className={classes.image}>
         <Typography>BLOG</Typography>
-        <Typography>Code For Interview</Typography>
+        <Typography>Blog Project</Typography>
        </Box>
      );
 }

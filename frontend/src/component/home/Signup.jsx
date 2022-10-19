@@ -32,7 +32,6 @@ const found =await axios.post(`${url}/register`,{
   pass:pass,
   cpass:cpass
 });
-console.log("hey hiii");
 console.log(found);
 if(found.status===422||!found)
 {

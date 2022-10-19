@@ -64,7 +64,6 @@ const Detailview = (match) => {
     
     //delete post
     const deletepost = async () => {
-        console.log("deletepost")
         console.log(id);
         const res=await axios.post(`${url}/delete`,{id:id})
         if(res.data==="success")
@@ -77,7 +76,6 @@ const Detailview = (match) => {
     const [check,setCheck]=useState(false);
     useEffect(async ()=>{
         const x=localStorage.getItem('id');
-        console.log('here 80 detailview',x);
         const res=await axios.post(`${url}/name`,{id:x})
         console.log('res',res);
         let n=res.data.n;
