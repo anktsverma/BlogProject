@@ -1,9 +1,8 @@
 import React, { useState} from 'react';
 import {History } from 'react-router-dom';
 import axios  from 'axios';
-
+const url=process.env.URI
 export default function SignUp() {
-//  const history= useHistory();
   const [data,setData]=useState({
     fName: "",
     email: "",
@@ -26,7 +25,7 @@ const PostData=async(e)=>{
 e.preventDefault();
 const {fName,email,phone,pass,cpass}=data;
 console.log(data);
-const found =await axios.post("https://blog-app79.herokuapp.com//register",{
+const found =await axios.post(`${url}/register`,{
   fName:fName,
   email:email,
   phone:phone,

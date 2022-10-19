@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useEffect} from "react";
 import {getPost} from '../../service/api';
 import axios from "axios";
-
+const url=process.env.URI
 const useStyle=makeStyles({
 container:{
     padding:'0 100px',
@@ -66,7 +66,7 @@ const Detailview = (match) => {
     const deletepost = async () => {
         console.log("deletepost")
         console.log(id);
-        const res=await axios.post("https://blog-app79.herokuapp.com//delete",{id:id})
+        const res=await axios.post(`${url}/delete`,{id:id})
         if(res.data==="success")
         {
             navigate("/");
@@ -78,7 +78,7 @@ const Detailview = (match) => {
     useEffect(async ()=>{
         const x=localStorage.getItem('id');
         console.log('here 80 detailview',x);
-        const res=await axios.post("https://blog-app79.herokuapp.com//name",{id:x})
+        const res=await axios.post(`${url}/name`,{id:x})
         console.log('res',res);
         let n=res.data.n;
         if(post && (n===post.username)) {

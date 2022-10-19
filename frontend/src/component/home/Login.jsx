@@ -3,7 +3,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+const url=process.env.URI
 
 const Login = () => {
   let navigate = useNavigate();
@@ -25,7 +25,7 @@ const Login = () => {
 const submitEve=async(e)=>
 {   
     e.preventDefault();
-    const res=await axios.post(`https://blog-app79.herokuapp.com//getuser`,
+    const res=await axios.post(`${url}/getuser`,
     data
     );
      localStorage.setItem("jwttoken", res.data.token);

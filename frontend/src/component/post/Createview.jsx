@@ -4,6 +4,7 @@ import { useState ,useEffect} from "react";
 import { CreatePost } from "../../service/api";
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
+const url=process.env.URI
 const useStyle=makeStyles({
     container:
     {
@@ -64,7 +65,7 @@ const Createview = () => {
 
     useEffect(async()=>{
         const x=localStorage.getItem('id');
-       const res=await axios.post("https://blog-app79.herokuapp.com//name",{id:x})
+       const res=await axios.post(`${url}/name`,{id:x})
        console.log('res',res);
        let n=res.data.n;
        setPost({
